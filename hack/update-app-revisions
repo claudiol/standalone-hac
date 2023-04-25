@@ -15,9 +15,9 @@ REVISION=$(git rev-parse --abbrev-ref HEAD)
 echo "Updating this repos gitops repo references to be:"
 echo "Rep: $REMOTE Revision: $REVISION"
 
-yq -i '.spec.source.repoURL="'$REMOTE'"'  $ROOT/argo-cd-apps/app-of-apps/all-applications.yaml
-yq -i '.spec.source.targetRevision="'$REVISION'"'  $ROOT/argo-cd-apps/app-of-apps/all-applications.yaml
+yq -Y -i '.spec.source.repoURL="'$REMOTE'"'  $ROOT/argo-cd-apps/app-of-apps/all-applications.yaml
+yq -Y -i '.spec.source.targetRevision="'$REVISION'"'  $ROOT/argo-cd-apps/app-of-apps/all-applications.yaml
 
-yq -i '.spec.source.repoURL="'$REMOTE'"'  $ROOT/argo-cd-apps/base/repo-overlay.yaml
-yq -i '.spec.source.targetRevision="'$REVISION'"'  $ROOT/argo-cd-apps/base/repo-overlay.yaml
+yq -Y -i '.spec.source.repoURL="'$REMOTE'"'  $ROOT/argo-cd-apps/base/repo-overlay.yaml
+yq -Y -i '.spec.source.targetRevision="'$REVISION'"'  $ROOT/argo-cd-apps/base/repo-overlay.yaml
     

@@ -3,6 +3,6 @@ kind: FrontendEnvironment
 metadata:
   name: env-boot
 spec: 
-  sso: "https://keycloak-dev-sso.apps-crc.testing/auth/" 
+  sso: "https://keycloak-dev-sso.apps.lc-dso-pac-494f-1.blueprints.rhecoeng.com/auth/"
   ingressClass: openshift-default
-  hostname: env-boot-local-127-0-0-1.nip.io
+  hostname: keycloak-dev-sso.apps.lc-dso-pac-494f-1.blueprints.rhecoeng.com
