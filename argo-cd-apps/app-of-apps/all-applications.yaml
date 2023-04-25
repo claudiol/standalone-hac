@@ -10,7 +10,7 @@ spec:
   source:
     path: argo-cd-apps/overlays/crc
     repoURL: https://github.com/claudiol/standalone-hac.git
-    targetRevision: dso-pac-494f-1
+    targetRevision: preview-dso-pac-494f-1
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
